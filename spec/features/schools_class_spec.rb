@@ -3,15 +3,15 @@ require 'rails_helper'
 
 describe 'form page' do
   it 'form renders with the new action' do
-    visit new_schools_class_path
+    visit new_school_class_path
     expect(page).to have_content("School Class Form")
   end
 
   it 'new form submits content and renders form content' do
-    visit new_schools_class_path
+    visit new_school_class_path
 
-    fill_in 'schools_class_title', with: "Software Engineering"
-    fill_in 'schools_class_room_number', with: 10
+    fill_in 'school_class_title', with: "Software Engineering"
+    fill_in 'school_class_room_number', with: 10
 
     click_on "Create School class"
 
@@ -21,10 +21,10 @@ describe 'form page' do
   it 'edit form submits content and renders form content' do
     @edit_schools_class = SchoolsClass.create(title: "Computer Science", room_number: 5)
 
-    visit edit_schools_class_path(@edit_schools_class)
+    visit edit_school_class_path(@edit_schools_class)
 
-    fill_in 'schools_class_title', with: "Risk Analysis"
-    fill_in 'schools_class_room_number', with: 10
+    fill_in 'school_class_title', with: "Risk Analysis"
+    fill_in 'school_class_room_number', with: 10
 
     click_on "Update School class"
 
@@ -34,8 +34,8 @@ describe 'form page' do
   it 'submitted new form creates a record in the database' do
     visit new_schools_class_path
 
-    fill_in 'schools_class_title', with: "Sabermetrics"
-    fill_in 'schools_class_room_number', with: 42
+    fill_in 'school_class_title', with: "Sabermetrics"
+    fill_in 'school_class_room_number', with: 42
 
     click_on "Create School class"
 
@@ -47,8 +47,8 @@ describe 'form page' do
 
     visit edit_schools_class_path(@edit_db_schools_class)
 
-    fill_in 'schools_class_title', with: "Machine Learning"
-    fill_in 'schools_class_room_number', with: 11
+    fill_in 'school_class_title', with: "Machine Learning"
+    fill_in 'school_class_room_number', with: 11
 
     click_on "Update School class"
 
