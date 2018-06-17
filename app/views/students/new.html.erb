@@ -1,10 +1,9 @@
-<h1>Sudent Form</h1>
-<%= form_tag students_path do %>
-  <label>First Name:</label><br>
-  <%= text_field_tag :first_name %><br>
+<h1>New Sudent Form</h1>
+<%= form_for @student do |f| %>
+  <%= f.label :first_name%>
+  <%= f.text_field :first_name %><br>
 
-  <label>Last Name:</label><br>
-  <%= text_area_tag :last_name %><br>
-
+  <%= f.label :first_name%>
+  <%= f.label :last_name%>
   <%= submit_tag "Submit Post" %>
 <% end %>
