@@ -2,15 +2,15 @@ class SchoolClassesController < ApplicationController
   before_action :set_school_class, only: [:show, :edit, :update, :destroy]
 
  def index
-   @school_classes = SchoolClass.all
+   @school_classes = SchoolsClass.all
  end
 
  def new
-   @school_class = SchoolClass.new
+   @school_class = SchoolsClass.new
  end
 
  def create
-   @school_class = SchoolClass.new(school_class_params(:title, :room_number))
+   @school_class = SchoolsClass.new(school_class_params(:title, :room_number))
    @school_class.save
 
    redirect_to school_class_path(@school_class)
@@ -40,7 +40,7 @@ class SchoolClassesController < ApplicationController
 
  def set_school_class
 
- @school_class = SchoolClass.find(params[:id])
+ @school_class = SchoolsClass.find(params[:id])
 
  end
 end
