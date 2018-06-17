@@ -1,2 +1,10 @@
 <h1>Sudent Form</h1>
-<p>Find me in app/views/students_controller/new.html.erb</p>
+<%= form_tag students_path do %>
+  <label>First Name:</label><br>
+  <%= text_field_tag :first_name %><br>
+
+  <label>Last Name:</label><br>
+  <%= text_area_tag :last_name %><br>
+
+  <%= submit_tag "Submit Post" %>
+<% end %>
