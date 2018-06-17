@@ -26,6 +26,6 @@ class StudentsController < ApplicationController
     params.require(:student).permit(*args)
   end
   def set_student
-    @student = Student.find(param[:id])
+    @student = Student.find(params[:id])
   end
 end
