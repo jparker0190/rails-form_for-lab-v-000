@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'students_controller/new'
+
+  get 'students_controller/create'
+
+  get 'students_controller/edit'
+
+  get 'students_controller/update'
+
   get 'school_classes/new'
 
   get 'school_classes/create'
