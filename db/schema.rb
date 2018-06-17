@@ -11,9 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180617194644) do
+ActiveRecord::Schema.define(version: 2) do
 
-  create_table "schools_classes", force: :cascade do |t|
+  create_table "school_classes", force: :cascade do |t|
     t.string   "title"
     t.integer  "room_number"
     t.datetime "created_at",  null: false
@@ -26,5 +26,7 @@ ActiveRecord::Schema.define(version: 20180617194644) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+end
 
 end
