@@ -1,12 +1,12 @@
 require 'rails_helper'
 
-describe SchoolsClass do
+describe SchoolClass do
   before(:each) do
-    @schools_class = SchoolsClass.create!(title: "Computer Science", room_number: 5)
+    @school_class = SchoolClass.create!(title: "Computer Science", room_number: 5)
   end
 
   it 'can be created' do
-    expect(@schools_class).to be_valid
+    expect(@school_class).to be_valid
   end
 
 end
