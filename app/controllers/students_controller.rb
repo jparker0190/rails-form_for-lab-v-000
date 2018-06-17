@@ -10,4 +10,7 @@ class StudentsController < ApplicationController
 
   def update
   end
+  private 
+  def student_params(*arg)
+    params.require(:student)
 end
