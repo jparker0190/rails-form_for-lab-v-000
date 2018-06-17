@@ -19,7 +19,7 @@ describe 'form page' do
   end
 
   it 'edit form submits content and renders form content' do
-    @edit_schools_class = SchoolClass.create(title: "Computer Science", room_number: 5)
+    @edit_schools_class = SchoolsClass.create(title: "Computer Science", room_number: 5)
 
     visit edit_schools_class_path(@edit_schools_class)
 
@@ -39,11 +39,11 @@ describe 'form page' do
 
     click_on "Create School class"
 
-    expect(SchoolClass.last.title).to eq("Sabermetrics")
+    expect(SchoolsClass.last.title).to eq("Sabermetrics")
   end
 
   it 'submitted edit form creates a record in the database' do
-    @edit_db_schools_class = SchoolClass.create(title: "Computer Science", room_number: 5)
+    @edit_db_schools_class = SchoolsClass.create(title: "Computer Science", room_number: 5)
 
     visit edit_schools_class_path(@edit_db_schools_class)
 
@@ -52,12 +52,12 @@ describe 'form page' do
 
     click_on "Update School class"
 
-    expect(SchoolClass.last.title).to eq("Machine Learning")
+    expect(SchoolsClass.last.title).to eq("Machine Learning")
   end
 end
 
 describe 'Show page' do
-  let(:schools_class) { SchoolClass.create(title: "Computer Science", room_number: 5) }
+  let(:schools_class) { SchoolsClass.create(title: "Computer Science", room_number: 5) }
 
   it 'renders properly' do
     visit schools_class_path(schools_class)
