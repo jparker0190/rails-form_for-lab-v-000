@@ -1,2 +1,6 @@
-<h1>SchoolClasses#edit</h1>
-<p>Find me in app/views/school_classes/edit.html.erb</p>
+<h1>Edit School Class</h1>
+<%= form_for @school_class do |f| %>
+  <%= f.text_field :title %><br>
+  <%= f.text_field :room_number %><br>
+  <%= f.submit %>
+<% end %>
